@@ -30,6 +30,11 @@ export const metadata: Metadata = {
       'A new expression of electric performance, precision and design. Discover the 3D cinematic automotive launch experience.',
     type: 'website',
   },
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export const viewport: Viewport = {

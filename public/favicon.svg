@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#0e131b"/>
+      <stop offset="100%" stop-color="#050608"/>
+    </radialGradient>
+
+    <!-- Metallic Wing Gradient -->
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#cbd5e1"/>
+      <stop offset="70%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+
+    <!-- Cyan Electric Flare Gradient -->
+    <linearGradient id="cyanFlare" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#00e5ff"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Circular Outer Chassis Base -->
+  <circle cx="32" cy="32" r="31" fill="url(#bg)" stroke="#334155" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#00e5ff" stroke-width="0.75" stroke-opacity="0.3" stroke-dasharray="2 4"/>
+
+  <!-- Left Aerodynamic Wing of V -->
+  <path d="M12 18 L29 48 L33 48 L20 18 Z" fill="url(#metal)"/>
+
+  <!-- Right Aerodynamic Wing of V -->
+  <path d="M52 18 L35 48 L31 48 L44 18 Z" fill="url(#metal)"/>
+
+  <!-- Center Diamond Stance Vertex -->
+  <polygon points="32,22 36,30 32,40 28,30" fill="url(#cyanFlare)" filter="url(#glow)"/>
+
+  <!-- Precision Top Horizon Razor Line -->
+  <line x1="16" y1="18" x2="48" y2="18" stroke="#00e5ff" stroke-width="1.5" stroke-linecap="round" filter="url(#glow)"/>
+
+  <!-- Center Core Light Point -->
+  <circle cx="32" cy="30" r="1.5" fill="#ffffff"/>
+</svg>
